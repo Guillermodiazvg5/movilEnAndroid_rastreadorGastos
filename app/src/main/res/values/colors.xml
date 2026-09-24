@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- ===== MODO CLARO ===== -->
+    <color name="light_background">#F5F5F5</color>
+    <color name="light_card">#FFFFFF</color>
+    <color name="light_sidebar">#EEF1F8</color>
+    <color name="light_text">#333333</color>
+    <color name="light_text_secondary">#666666</color>
+    <color name="light_border">#E0E0E0</color>
+
+    <!-- ===== MODO OSCURO ===== -->
+    <color name="dark_background">#1E1E2E</color>
+    <color name="dark_card">#2A2A3E</color>
+    <color name="dark_sidebar">#252535</color>
+    <color name="dark_text">#FFFFFF</color>
+    <color name="dark_text_secondary">#B0B0C0</color>
+    <color name="dark_border">#3A3A4E</color>
+
+    <!-- ===== COLORES COMUNES ===== -->
+    <color name="purple_primary">#6B6BFF</color>
+    <color name="purple_accent">#7B68EE</color>
+    <color name="purple_light">#9D8CFF</color>
+    <color name="white">#FFFFFF</color>
 </resources>

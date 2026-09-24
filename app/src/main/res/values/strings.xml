@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">RastreadorGastos</string>
+    <string name="app_name">ElPesito</string>
+    <string name="header_title">🐷 ElPesito</string>
+    <string name="section_profile">Perfil del Usuario</string>
+    <string name="user_name">Juan Pérez</string>
+    <string name="user_role">Analista Financiero</string>
+    <string name="studies_title">📚 Estudios</string>
+    <string name="studies_content">Contaduría Pública - Politécnico Grancolombiano</string>
+    <string name="studies_desc">Especialización en Finanzas Personales.</string>
+    <string name="experience_title">💼 Experiencia</string>
+    <string name="experience_content">Más de 5 años de experiencia gestionando presupuestos y controlando finanzas personales.</string>
+    <string name="experience_desc">Experto en estrategias de ahorro e inversiones a largo plazo. Ha dictado seminarios sobre libertad financiera y economía del hogar.</string>
+
+    <string name="menu_profile">Perfil</string>
+    <string name="menu_photos">Fotos</string>
+    <string name="menu_video">Video</string>
+    <string name="menu_web">Web</string>
+    <string name="menu_buttons">Botones</string>
 </resources>
