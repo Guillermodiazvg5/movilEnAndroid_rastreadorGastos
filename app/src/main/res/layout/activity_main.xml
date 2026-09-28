@@ -30,14 +30,17 @@
             android:textColor="@color/purple_light"
             android:layout_marginBottom="30dp"/>
 
-        <!-- Perfil (activo) -->
+        <!-- Perfil (ACTIVO) -->
         <LinearLayout
+            android:id="@+id/menuPerfil"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:background="@drawable/bg_sidebar_active"
             android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true"
             android:layout_marginBottom="10dp">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👤" android:textSize="14sp"/>
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_profile" android:textSize="11sp" android:textColor="@color/white" android:layout_marginStart="6dp"/>
@@ -45,44 +48,56 @@
 
         <!-- Fotos -->
         <LinearLayout
+            android:id="@+id/menuFotos"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:padding="12dp">
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📷" android:textSize="14sp"/>
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_photos" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
         <!-- Video -->
         <LinearLayout
+            android:id="@+id/menuVideo"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:padding="12dp">
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎥" android:textSize="14sp"/>
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_video" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
         <!-- Web -->
         <LinearLayout
+            android:id="@+id/menuWeb"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:padding="12dp">
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌐" android:textSize="14sp"/>
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_web" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
         <!-- Botones -->
         <LinearLayout
+            android:id="@+id/menuBotones"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:padding="12dp">
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚪" android:textSize="14sp"/>
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_buttons" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
