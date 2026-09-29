@@ -37,7 +37,7 @@ class WebActivity : AppCompatActivity() {
             }
         }
 
-        val defaultUrl = "https://finanzaspersonales.com.co"
+        val defaultUrl = "https://google.com"
         urlInput.setText(defaultUrl)
         loadUrl(defaultUrl)
 
