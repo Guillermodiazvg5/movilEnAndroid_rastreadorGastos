@@ -34,9 +34,9 @@ Aplicación móvil para Android para el registro y control de gastos personales,
 
 | Perfil del Usuario | Editar Perfil | Gastos |
 |:---:|:---:|:---:|
-| ![Perfil](<img width="720" height="1600" alt="PerfilDeUsuario" src="https://github.com/user-attachments/assets/ed28e112-fe03-40ae-bbec-c55023663c97" />
-) | ![Editar](<img width="720" height="1600" alt="EditarPerfil" src="https://github.com/user-attachments/assets/90b994ca-5d73-43b9-b3bb-49733ad9b305" />
-) | ![Gastos](<img width="720" height="1600" alt="Gastos" src="https://github.com/user-attachments/assets/a9917a34-e56a-4ecf-8804-b8c6d2d82ad5" />
+|(<img width="720" height="1600" alt="PerfilDeUsuario" src="https://github.com/user-attachments/assets/ed28e112-fe03-40ae-bbec-c55023663c97" />
+) |(<img width="720" height="1600" alt="EditarPerfil" src="https://github.com/user-attachments/assets/90b994ca-5d73-43b9-b3bb-49733ad9b305" />
+) |(<img width="720" height="1600" alt="Gastos" src="https://github.com/user-attachments/assets/a9917a34-e56a-4ecf-8804-b8c6d2d82ad5" />
 ) |
 
 | Agregar Gasto | Lista Vacía | Modo Oscuro |
