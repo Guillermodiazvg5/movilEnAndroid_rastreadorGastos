@@ -40,7 +40,7 @@
             android:clickable="true"
             android:focusable="true">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👤" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Perfil" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Perfil" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -67,7 +67,7 @@
             android:clickable="true"
             android:focusable="true">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📷" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fotos" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fotos" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -80,7 +80,7 @@
             android:clickable="true"
             android:focusable="true">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎥" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Video" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Video" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -93,7 +93,7 @@
             android:clickable="true"
             android:focusable="true">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌐" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Web" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Web" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -105,8 +105,8 @@
             android:padding="12dp"
             android:clickable="true"
             android:focusable="true">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚪" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Botones" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💰" android:textSize="14sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Botones" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
     </LinearLayout>
 

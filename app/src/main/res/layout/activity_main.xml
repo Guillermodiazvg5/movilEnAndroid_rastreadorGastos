@@ -57,7 +57,7 @@
             android:clickable="true"
             android:focusable="true">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📷" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_photos" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_photos" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
         <!-- Video -->
@@ -71,7 +71,7 @@
             android:clickable="true"
             android:focusable="true">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎥" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_video" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_video" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
         <!-- Web -->
@@ -85,7 +85,7 @@
             android:clickable="true"
             android:focusable="true">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌐" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_web" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_web" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
         <!-- Botones -->
@@ -98,16 +98,41 @@
             android:padding="12dp"
             android:clickable="true"
             android:focusable="true">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚪" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_buttons" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💰" android:textSize="14sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gastos" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <!-- Modo Oscuro -->
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modo Oscuro"
+                android:textSize="10sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_marginBottom="5dp"/>
+
+            <Switch
+                android:id="@+id/themeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
         </LinearLayout>
 
     </LinearLayout>
 
-    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <!-- Contenido principal -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:id="@+id/scrollPerfil"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/sidebar"
@@ -119,7 +144,7 @@
             android:orientation="vertical"
             android:padding="25dp">
 
-            <!-- Encabezado con Switch -->
+            <!-- Encabezado con botón Editar -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -134,12 +159,19 @@
                     android:textColor="?android:attr/textColorPrimary"
                     android:layout_centerVertical="true"/>
 
-                <Switch
-                    android:id="@+id/themeSwitch"
+                <TextView
+                    android:id="@+id/btnEditar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="✏️"
+                    android:textSize="22sp"
+                    android:padding="8dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"/>
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:attr/selectableItemBackground"/>
+
             </RelativeLayout>
 
             <!-- Tarjeta principal con avatar -->
@@ -151,16 +183,32 @@
                 android:orientation="vertical"
                 android:gravity="center_horizontal">
 
-                <TextView
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
-                    android:background="@drawable/bg_avatar"
-                    android:gravity="center"
-                    android:text="👨‍💼"
-                    android:textSize="55sp"
-                    android:layout_marginBottom="15dp"/>
+                <!-- Foto de perfil (o emoji por defecto) -->
+                <FrameLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:id="@+id/imgPerfil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_avatar"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Foto de perfil"/>
+
+                    <TextView
+                        android:id="@+id/emojiPerfil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="👨‍💼"
+                        android:textSize="55sp"/>
+
+                </FrameLayout>
 
                 <TextView
+                    android:id="@+id/txtNombre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/user_name"
@@ -169,6 +217,7 @@
                     android:textColor="?android:attr/textColorPrimary"/>
 
                 <TextView
+                    android:id="@+id/txtRol"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/user_role"
@@ -186,8 +235,7 @@
                     android:layout_marginBottom="15dp">
 
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/studies_title" android:textSize="13sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/studies_content" android:textSize="13sp" android:textColor="?android:attr/textColorPrimary" android:layout_marginTop="8dp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/studies_desc" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginTop="4dp"/>
+                    <TextView android:id="@+id/txtEstudios" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/studies_content" android:textSize="13sp" android:textColor="?android:attr/textColorPrimary" android:layout_marginTop="8dp"/>
                 </LinearLayout>
 
                 <!-- Experiencia -->
@@ -199,8 +247,7 @@
                     android:orientation="vertical">
 
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/experience_title" android:textSize="13sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/experience_content" android:textSize="13sp" android:textColor="?android:attr/textColorPrimary" android:layout_marginTop="8dp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/experience_desc" android:textSize="11sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginTop="4dp"/>
+                    <TextView android:id="@+id/txtExperiencia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/experience_content" android:textSize="13sp" android:textColor="?android:attr/textColorPrimary" android:layout_marginTop="8dp"/>
                 </LinearLayout>
 
             </LinearLayout>
