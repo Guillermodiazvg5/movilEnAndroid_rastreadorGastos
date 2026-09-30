@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:padding="25dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✏️ Editar Perfil"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="25dp"/>
+
+        <!-- Foto de perfil -->
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/imgEditarFoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_avatar"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/emojiEditarFoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="👨‍💼"
+                android:textSize="55sp"/>
+
+        </FrameLayout>
+
+        <!-- Botón cambiar foto -->
+        <TextView
+            android:id="@+id/btnCambiarFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📷 Cambiar foto"
+            android:textSize="14sp"
+            android:textColor="@color/purple_light"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Nombre -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nombre" android:textSize="13sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:padding="15dp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Rol -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rol" android:textSize="13sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/etRol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:padding="15dp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Estudios -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Estudios" android:textSize="13sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/etEstudios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:padding="15dp"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:gravity="top|start"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Experiencia -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Experiencia" android:textSize="13sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/etExperiencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:padding="15dp"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top|start"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="25dp"/>
+
+        <!-- Botón Guardar -->
+        <Button
+            android:id="@+id/btnGuardarPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Cambios"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/purple_accent"
+            android:padding="15dp"/>
+
+    </LinearLayout>
+</ScrollView>
