@@ -27,6 +27,13 @@ Aplicación móvil para Android para el registro y control de gastos personales,
 [Ver diseño en Figma](https://www.figma.com/design/dhDUFT3GzuXW99rnha1TFe/App-movil-Gestor-de-Gastos?node-id=0-1&t=joCfQK09YVUjn6Mu-1)
 
 
+---
+
+## 📥 Descargar APK
+
+👉 [**Descargar ElPesito APK**](https://github.com/Guillermodiazvg5/movilEnAndroid_rastreadorGastos/releases/latest/download/app-release.apk)
+
+> ⚠️ Al instalar el APK, permite "Instalar apps de fuentes desconocidas" en tu teléfono.
 
 ---
 
