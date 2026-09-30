@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         // ===== Configuración de la barra lateral =====
         val menuPerfil = findViewById<LinearLayout>(R.id.menuPerfil)
+        val menuGastos = findViewById<LinearLayout>(R.id.menuGastos)
         val menuFotos = findViewById<LinearLayout>(R.id.menuFotos)
         val menuVideo = findViewById<LinearLayout>(R.id.menuVideo)
         val menuWeb = findViewById<LinearLayout>(R.id.menuWeb)
@@ -45,6 +46,13 @@ class MainActivity : AppCompatActivity() {
         menuPerfil.setOnClickListener {
             // Ya estamos en Perfil, no hacemos nada
             Toast.makeText(this, "Ya estás en Perfil", Toast.LENGTH_SHORT).show()
+        }
+
+        menuGastos.setOnClickListener {
+            val intent = Intent(this, GastosActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
+            finish()
         }
 
         menuFotos.setOnClickListener {
@@ -56,13 +64,18 @@ class MainActivity : AppCompatActivity() {
         }
 
         menuWeb.setOnClickListener {
-            Toast.makeText(this, "Web - Próximamente", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, WebActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
+            finish()
         }
 
         // Botones → abre AccionesActivity
         menuBotones.setOnClickListener {
             val intent = Intent(this, AccionesActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
             startActivity(intent)
+            finish()
         }
     }
 }
