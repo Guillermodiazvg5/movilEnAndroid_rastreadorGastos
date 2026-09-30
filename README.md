@@ -24,7 +24,7 @@ Aplicación móvil para Android para el registro y control de gastos personales,
 
 ## 🎨 Mockup
 
-[Ver diseño en Figma](https://www.figma.com/design/dhDUFT3GzuXW99mha1TFe/App-movil-Gestor-de-Gastos?node-id=0-1&t=GZOzyFOsXWE4amnm-0)
+[Ver diseño en Figma](https://www.figma.com/design/dhDUFT3GzuXW99rnha1TFe/App-movil-Gestor-de-Gastos?node-id=0-1&t=joCfQK09YVUjn6Mu-1)
 
 
 
