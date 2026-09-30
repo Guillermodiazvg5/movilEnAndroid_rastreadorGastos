@@ -38,7 +38,7 @@ Aplicación móvil para Android para el registro y control de gastos personales,
 |:---:|:---:|:---:|
 | ![Agregar](URL_DE_TU_CAPTURA_AGREGAR) | ![Vacía](URL_DE_TU_CAPTURA_VACIA) | ![Oscuro](URL_DE_TU_CAPTURA_OSCURO) |
 
-> 💡 **Tip:** Para subir las imágenes, arrástralas directamente en el editor de GitHub y el sistema te generará los enlaces automáticamente.
+
 
 ---
 
