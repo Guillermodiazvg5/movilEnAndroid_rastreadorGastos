@@ -39,7 +39,7 @@ Aplicación móvil para Android para el registro y control de gastos personales,
 
 ## 📸 Capturas de pantalla
 
-| Perfil del Usuario | Editar Perfil | Gastos |
+| Perfil del Usuario                       |                Editar Perfil                      |                 Gastos                       |
 
 |<img width="250" height="555" alt="PerfilDeUsuario" src="https://github.com/user-attachments/assets/ed28e112-fe03-40ae-bbec-c55023663c97" />
  |<img width="250" height="555" alt="EditarPerfil" src="https://github.com/user-attachments/assets/90b994ca-5d73-43b9-b3bb-49733ad9b305" />
