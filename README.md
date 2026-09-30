@@ -33,18 +33,17 @@ Aplicación móvil para Android para el registro y control de gastos personales,
 ## 📸 Capturas de pantalla
 
 | Perfil del Usuario | Editar Perfil | Gastos |
-|:---:|:---:|:---:|
+
 |<img width="720" height="1600" alt="PerfilDeUsuario" src="https://github.com/user-attachments/assets/ed28e112-fe03-40ae-bbec-c55023663c97" />
-) |<img width="720" height="1600" alt="EditarPerfil" src="https://github.com/user-attachments/assets/90b994ca-5d73-43b9-b3bb-49733ad9b305" />
-) |<img width="720" height="1600" alt="Gastos" src="https://github.com/user-attachments/assets/a9917a34-e56a-4ecf-8804-b8c6d2d82ad5" />
-) |
+ |<img width="720" height="1600" alt="EditarPerfil" src="https://github.com/user-attachments/assets/90b994ca-5d73-43b9-b3bb-49733ad9b305" />
+ |<img width="720" height="1600" alt="Gastos" src="https://github.com/user-attachments/assets/a9917a34-e56a-4ecf-8804-b8c6d2d82ad5" />
+ |
 
 | Agregar Gasto | Lista Vacía | Modo Oscuro |
-|:---:|:---:|:---:|
+
 |<img width="720" height="1600" alt="AgregarGasto" src="https://github.com/user-attachments/assets/c2bb53f3-7492-4bc6-b757-d85454e64496" />
-) |<img width="720" height="1600" alt="ListaVacia" src="https://github.com/user-attachments/assets/8eaa2184-192d-40a2-9c7f-a9455e17a49b" />
-) |<img width="720" height="1600" alt="ModoOscuro" src="https://github.com/user-attachments/assets/5a3e2232-7ee5-452a-9eff-11a3bf258fd0" />
-) |
+ |<img width="720" height="1600" alt="ListaVacia" src="https://github.com/user-attachments/assets/8eaa2184-192d-40a2-9c7f-a9455e17a49b" />
+|<img width="720" height="1600" alt="ModoOscuro" src="https://github.com/user-attachments/assets/5a3e2232-7ee5-452a-9eff-11a3bf258fd0" /> |
 
 
 
