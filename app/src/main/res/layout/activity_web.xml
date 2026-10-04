@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?android:attr/colorBackground"
-    tools:context=".GastosActivity">
+    tools:context=".WebActivity">
 
     <!-- ================= BARRA LATERAL ================= -->
     <LinearLayout
@@ -44,6 +44,20 @@
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Perfil" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
+        <!-- Gastos -->
+        <LinearLayout
+            android:id="@+id/menuGastos"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💰" android:textSize="14sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gastos" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
         <!-- Fotos -->
         <LinearLayout
             android:id="@+id/menuFotos"
@@ -72,23 +86,9 @@
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Video" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
-        <!-- Web -->
+        <!-- Web (ACTIVO) -->
         <LinearLayout
             android:id="@+id/menuWeb"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="12dp"
-            android:clickable="true"
-            android:focusable="true">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌐" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Web" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
-        </LinearLayout>
-
-        <!-- Gastos (ACTIVO) - posición final -->
-        <LinearLayout
-            android:id="@+id/menuBotones"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -97,8 +97,22 @@
             android:padding="12dp"
             android:clickable="true"
             android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌐" android:textSize="14sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Web" android:textSize="10sp" android:textColor="@color/white" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <!-- Botones (Gastos) -->
+        <LinearLayout
+            android:id="@+id/menuBotones"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💰" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gastos" android:textSize="10sp" android:textColor="@color/white" android:layout_marginStart="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gastos" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -116,74 +130,65 @@
 
         <!-- Título -->
         <TextView
+            android:id="@+id/tvTituloWeb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="💰 Gastos"
+            android:text="🌐 Navegador Web Integrado"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="?android:attr/textColorPrimary"
             android:layout_marginBottom="15dp"/>
 
-        <!-- Tarjeta resumen del total -->
+        <!-- Barra de URL y botón Cargar -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:background="@drawable/bg_card"
-            android:padding="15dp"
+            android:padding="10dp"
             android:layout_marginBottom="15dp"
             android:gravity="center_vertical">
-            <TextView
-                android:id="@+id/totalGastos"
+
+            <EditText
+                android:id="@+id/urlInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:hint="https://ejemplo.com"
+                android:inputType="textUri"
+                android:imeOptions="actionGo"
+                android:maxLines="1"
+                android:padding="12dp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textColorHint="?android:attr/textColorSecondary"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/loadBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total gastos este mes: $0"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="@color/purple_light"/>
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/purple_accent"
+                android:text="Cargar"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Contenedor que agrupa el RecyclerView y el mensaje de lista vacía -->
+        <!-- Contenedor del WebView -->
         <FrameLayout
+            android:id="@+id/webContainer"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/bg_card"
+            android:padding="2dp">
 
-            <!-- Lista de gastos -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerGastos"
+            <WebView
+                android:id="@+id/webView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false"/>
-
-            <!-- Mensaje cuando la lista está vacía -->
-            <TextView
-                android:id="@+id/tvListaVacia"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="📭&#10;&#10;No tienes gastos aún.&#10;Toca + para agregar uno."
-                android:textSize="15sp"
-                android:textColor="?android:attr/textColorSecondary"
-                android:gravity="center"
-                android:lineSpacingExtra="6dp"
-                android:padding="30dp"
-                android:visibility="gone" />
-
+                android:layout_height="match_parent" />
         </FrameLayout>
-
     </LinearLayout>
-
-    <!-- ================= BOTÓN FLOTANTE (+) ================= -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabAgregar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_input_add"
-        android:backgroundTint="@color/purple_accent"
-        app:tint="@color/white"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

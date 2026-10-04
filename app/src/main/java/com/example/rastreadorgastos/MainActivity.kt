@@ -3,7 +3,6 @@ package com.example.rastreadorgastos
 import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
-import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AnimationUtils
@@ -66,15 +65,24 @@ class MainActivity : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.menuPerfil).setOnClickListener {
             Toast.makeText(this, "Ya estás en Perfil", Toast.LENGTH_SHORT).show()
         }
+
+
+
         findViewById<LinearLayout>(R.id.menuFotos).setOnClickListener {
             Toast.makeText(this, "Fotos - Próximamente", Toast.LENGTH_SHORT).show()
         }
+
         findViewById<LinearLayout>(R.id.menuVideo).setOnClickListener {
             Toast.makeText(this, "Video - Próximamente", Toast.LENGTH_SHORT).show()
         }
+
+        // ✅ Botón "Web" → abre WebActivity
         findViewById<LinearLayout>(R.id.menuWeb).setOnClickListener {
-            Toast.makeText(this, "Web - Próximamente", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, WebActivity::class.java)
+            startActivity(intent)
         }
+
+        // ✅ Botón "Gastos" (antes "Botones") → abre AccionesActivity
         findViewById<LinearLayout>(R.id.menuBotones).setOnClickListener {
             startActivity(Intent(this, AccionesActivity::class.java))
         }
