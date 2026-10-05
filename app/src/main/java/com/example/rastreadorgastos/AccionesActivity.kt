@@ -37,12 +37,11 @@ class AccionesActivity : AppCompatActivity() {
             finish()
         }
 
-        findViewById<LinearLayout>(R.id.menuFotos).setOnClickListener {
-            Toast.makeText(this, "Fotos - Próximamente", Toast.LENGTH_SHORT).show()
-        }
+
 
         findViewById<LinearLayout>(R.id.menuVideo).setOnClickListener {
-            Toast.makeText(this, "Video - Próximamente", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, VideoActivity::class.java)
+            startActivity(intent)
         }
 
         findViewById<LinearLayout>(R.id.menuWeb).setOnClickListener {

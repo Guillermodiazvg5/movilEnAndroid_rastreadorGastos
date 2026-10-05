@@ -51,9 +51,17 @@ class WebActivity : AppCompatActivity() {
             }
         }
 
-        val defaultUrl = "https://google.com"
-        urlInput.setText(defaultUrl)
-        loadUrl(defaultUrl)
+        // Verificar si viene un ID de YouTube desde otra Activity
+        val youtubeId = intent.getStringExtra("youtube_id")
+        if (youtubeId != null) {
+            val url = "https://www.youtube.com/watch?v=$youtubeId"
+            urlInput.setText(url)
+            loadUrl(url)
+        } else {
+            val defaultUrl = "https://google.com"
+            urlInput.setText(defaultUrl)
+            loadUrl(defaultUrl)
+        }
 
         // === Botón Cargar ===
         loadBtn.setOnClickListener {
@@ -118,12 +126,10 @@ class WebActivity : AppCompatActivity() {
             finish()
         }
 
-        findViewById<LinearLayout>(R.id.menuFotos).setOnClickListener {
-            Toast.makeText(this, "Fotos - Próximamente", Toast.LENGTH_SHORT).show()
-        }
 
         findViewById<LinearLayout>(R.id.menuVideo).setOnClickListener {
-            Toast.makeText(this, "Video - Próximamente", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, VideoActivity::class.java)
+            startActivity(intent)
         }
 
         findViewById<LinearLayout>(R.id.menuWeb).setOnClickListener {
