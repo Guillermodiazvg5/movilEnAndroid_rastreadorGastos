@@ -102,7 +102,7 @@
             android:background="@drawable/bg_card"
             android:padding="15dp"
             android:inputType="textMultiLine"
-            android:minLines="3"
+            android:minLines="1"
             android:gravity="top|start"
             android:textColor="?android:attr/textColorPrimary"
             android:layout_marginBottom="25dp"/>
@@ -117,7 +117,13 @@
             android:textStyle="bold"
             android:textColor="@color/white"
             android:backgroundTint="@color/purple_accent"
-            android:padding="15dp"/>
+            android:padding="15dp"
+            android:layout_marginBottom="30dp"/>   <!-- ← Separación del botón -->
+
+        <!-- Espacio adicional al final -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />   <!-- ← Este espacio empuja el botón hacia arriba -->
 
     </LinearLayout>
 </ScrollView>

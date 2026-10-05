@@ -73,16 +73,12 @@ class GastosActivity : AppCompatActivity() {
             lanzadorAgregarGasto.launch(intent)
         }
 
-        // Barra lateral
+        // ===== Barra lateral =====
         findViewById<LinearLayout>(R.id.menuPerfil).setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
             startActivity(intent)
             finish()
-        }
-
-        findViewById<LinearLayout>(R.id.menuGastos).setOnClickListener {
-            Toast.makeText(this, "Ya estás en Gastos", Toast.LENGTH_SHORT).show()
         }
 
         findViewById<LinearLayout>(R.id.menuFotos).setOnClickListener {
@@ -94,7 +90,8 @@ class GastosActivity : AppCompatActivity() {
         }
 
         findViewById<LinearLayout>(R.id.menuWeb).setOnClickListener {
-            Toast.makeText(this, "Web - Próximamente", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, WebActivity::class.java)
+            startActivity(intent)
         }
 
         findViewById<LinearLayout>(R.id.menuBotones).setOnClickListener {

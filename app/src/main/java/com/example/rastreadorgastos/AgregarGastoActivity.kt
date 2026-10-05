@@ -16,12 +16,14 @@ class AgregarGastoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_agregar_gasto)
 
+        // === Spinner de categorías ===
         val spinner = findViewById<Spinner>(R.id.spinnerCategoria)
         val categorias = arrayOf("Comida", "Transporte", "Hogar", "Salud", "Ocio", "Otros")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, categorias)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
 
+        // === Botón Guardar ===
         val btnGuardar = findViewById<Button>(R.id.btnGuardar)
         btnGuardar.setOnClickListener {
             val nombre = findViewById<EditText>(R.id.etNombre).text.toString().trim()
@@ -51,11 +53,6 @@ class AgregarGastoActivity : AppCompatActivity() {
             finish()
         }
 
-        findViewById<LinearLayout>(R.id.menuGastos).setOnClickListener {
-            startActivity(Intent(this, GastosActivity::class.java))
-            finish()
-        }
-
         findViewById<LinearLayout>(R.id.menuFotos).setOnClickListener {
             Toast.makeText(this, "Fotos - Próximamente", Toast.LENGTH_SHORT).show()
         }
@@ -64,10 +61,14 @@ class AgregarGastoActivity : AppCompatActivity() {
             Toast.makeText(this, "Video - Próximamente", Toast.LENGTH_SHORT).show()
         }
 
+        // ✅ Botón "Web" → abre WebActivity
         findViewById<LinearLayout>(R.id.menuWeb).setOnClickListener {
-            Toast.makeText(this, "Web - Próximamente", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, WebActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
+        // ✅ Botón "Gastos" (menuBotones) → abre AccionesActivity
         findViewById<LinearLayout>(R.id.menuBotones).setOnClickListener {
             startActivity(Intent(this, AccionesActivity::class.java))
         }
