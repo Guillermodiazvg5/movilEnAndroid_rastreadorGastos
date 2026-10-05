@@ -31,7 +31,7 @@ Aplicación móvil para Android para el registro y control de gastos personales,
 
 ## 📥 Descargar APK
 
-👉 [**Descargar ElPesito APK**](https://github.com/Guillermodiazvg5/movilEnAndroid_rastreadorGastos/releases/latest/download/app-release-ElPesitoV1.0.0.apk)
+👉 👉 [**Descargar ElPesito APK**](https://github.com/Guillermodiazvg5/movilEnAndroid_rastreadorGastos/releases/latest/download/ElPesito-v1.1.0-PantallaWeb.apk)
 
 > ⚠️ Al instalar el APK, permite "Instalar apps de fuentes desconocidas" en tu teléfono.
 
