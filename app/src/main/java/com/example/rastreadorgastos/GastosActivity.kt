@@ -95,6 +95,11 @@ class GastosActivity : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.menuBotones).setOnClickListener {
             startActivity(Intent(this, AccionesActivity::class.java))
         }
+
+        findViewById<LinearLayout>(R.id.menuIngresos).setOnClickListener {
+            val intent = Intent(this, MiPresupuestoActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     // Doble confirmación para eliminar

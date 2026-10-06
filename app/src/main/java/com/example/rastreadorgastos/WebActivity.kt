@@ -142,5 +142,10 @@ class WebActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        findViewById<LinearLayout>(R.id.menuIngresos).setOnClickListener {
+            val intent = Intent(this, MiPresupuestoActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?android:attr/colorBackground"
-    tools:context=".GastosActivity">
+    tools:context=".MiPresupuestoActivity">
 
     <!-- ================= BARRA LATERAL ================= -->
     <LinearLayout
@@ -72,10 +72,24 @@
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Web" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
-        <!-- Gastos (ACTIVO) - posición final -->
+        <!-- Gastos -->
         <LinearLayout
             android:id="@+id/menuBotones"
             android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💰" android:textSize="14sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gastos" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <!-- Ingresos (ACTIVO) -->
+        <LinearLayout
+            android:id="@+id/menuIngresos"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
@@ -83,22 +97,8 @@
             android:padding="12dp"
             android:clickable="true"
             android:focusable="true">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💰" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gastos" android:textSize="10sp" android:textColor="@color/white" android:layout_marginStart="6dp"/>
-        </LinearLayout>
-
-        <!-- Ingresos -->
-        <LinearLayout
-            android:id="@+id/menuIngresos"
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="12dp"
-            android:clickable="true"
-            android:focusable="true">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💵" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ingresos" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ingresos" android:textSize="10sp" android:textColor="@color/white" android:layout_marginStart="6dp"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -118,71 +118,101 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="💰 Gastos"
+            android:text="📊 Mi Presupuesto"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resumen de tus ingresos mensuales"
+            android:textSize="12sp"
+            android:textColor="?android:attr/textColorSecondary"
             android:layout_marginBottom="15dp"/>
 
-        <!-- Tarjeta resumen del total -->
+        <!-- Tarjeta Presupuesto Total -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_card"
-            android:padding="15dp"
-            android:layout_marginBottom="15dp"
-            android:gravity="center_vertical">
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_boton_morado"
+            android:padding="20dp"
+            android:layout_marginBottom="15dp">
+
             <TextView
-                android:id="@+id/totalGastos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total gastos este mes: $0"
-                android:textSize="14sp"
+                android:text="Presupuesto total del mes"
+                android:textSize="12sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/totalPresupuesto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textSize="26sp"
                 android:textStyle="bold"
-                android:textColor="@color/purple_light"/>
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"/>
         </LinearLayout>
 
-        <!-- Contenedor que agrupa el RecyclerView y el mensaje de lista vacía -->
-        <FrameLayout
+        <!-- Gráfico de torta (se oculta si no hay datos) -->
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Mensaje cuando NO hay ingresos (se muestra solo si está vacío) -->
+        <TextView
+            android:id="@+id/tvSinIngresos"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="📭&#10;&#10;No tienes ingresos aún.&#10;Toca + para agregar uno."
+            android:textSize="15sp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:lineSpacingExtra="6dp"
+            android:padding="30dp"
+            android:visibility="gone" />
 
-            <!-- Lista de gastos -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerGastos"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false"/>
+        <!-- Título de la lista (se oculta si no hay datos) -->
+        <TextView
+            android:id="@+id/tvTituloIngresos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📋 Ingresos Registrados"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="10dp"/>
 
-            <!-- Mensaje cuando la lista está vacía -->
-            <TextView
-                android:id="@+id/tvListaVacia"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="📭&#10;&#10;No tienes gastos aún.&#10;Toca + para agregar uno."
-                android:textSize="15sp"
-                android:textColor="?android:attr/textColorSecondary"
-                android:gravity="center"
-                android:lineSpacingExtra="6dp"
-                android:padding="30dp"
-                android:visibility="gone" />
-
-        </FrameLayout>
+        <!-- RecyclerView (se oculta si no hay datos) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerIngresos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"/>
 
     </LinearLayout>
 
     <!-- ================= BOTÓN FLOTANTE (+) ================= -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabAgregar"
+        android:id="@+id/fabAgregarIngreso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@android:drawable/ic_input_add"
         android:backgroundTint="@color/purple_accent"
         app:tint="@color/white"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

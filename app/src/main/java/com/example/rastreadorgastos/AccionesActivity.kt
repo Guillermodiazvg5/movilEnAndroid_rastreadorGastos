@@ -45,12 +45,19 @@ class AccionesActivity : AppCompatActivity() {
         }
 
         findViewById<LinearLayout>(R.id.menuWeb).setOnClickListener {
-            Toast.makeText(this, "Web - Próximamente", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, WebActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
-        // Botones → ya estamos aquí
+        // Botones
         findViewById<LinearLayout>(R.id.menuBotones).setOnClickListener {
             Toast.makeText(this, "Ya estás en Botones", Toast.LENGTH_SHORT).show()
+        }
+
+        findViewById<LinearLayout>(R.id.menuIngresos).setOnClickListener {
+            val intent = Intent(this, MiPresupuestoActivity::class.java)
+            startActivity(intent)
         }
     }
 }
