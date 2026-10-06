@@ -60,16 +60,21 @@ class AgregarGastoActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // ✅ Botón "Web" → abre WebActivity
+        //  Botón "Web" → abre WebActivity
         findViewById<LinearLayout>(R.id.menuWeb).setOnClickListener {
             val intent = Intent(this, WebActivity::class.java)
             startActivity(intent)
             finish()
         }
 
-        // ✅ Botón "Gastos" (menuBotones) → abre AccionesActivity
+        //  Botón "Gastos" (menuBotones) → abre AccionesActivity
         findViewById<LinearLayout>(R.id.menuBotones).setOnClickListener {
             startActivity(Intent(this, AccionesActivity::class.java))
+        }
+
+        findViewById<LinearLayout>(R.id.menuIngresos).setOnClickListener {
+            val intent = Intent(this, MiPresupuestoActivity::class.java)
+            startActivity(intent)
         }
     }
 

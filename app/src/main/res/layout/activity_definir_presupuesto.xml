@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context=".DefinirPresupuestoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💰 Definir Presupuesto"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registra tus ingresos mensuales para controlar tus finanzas"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Tarjeta Presupuesto Total -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_boton_morado"
+                android:padding="20dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Presupuesto total del mes"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/totalPresupuestoDefinir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$0"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecciona el tipo de ingreso"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Opción 1: Salario mensual -->
+            <LinearLayout
+                android:id="@+id/opcionSalario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_card"
+                android:padding="15dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💼" android:textSize="20sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Salario mensual" android:textSize="13sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:layout_marginStart="12dp"/>
+                <TextView android:id="@+id/checkSalario" android:layout_width="22dp" android:layout_height="22dp" android:gravity="center" android:text="✓" android:textSize="14sp" android:textColor="@color/white" android:background="@drawable/bg_avatar" android:visibility="invisible"/>
+            </LinearLayout>
+
+            <!-- Opción 2: Ganancias ocasionales -->
+            <LinearLayout
+                android:id="@+id/opcionGanancias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_card"
+                android:padding="15dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎁" android:textSize="20sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Ganancias ocasionales" android:textSize="13sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:layout_marginStart="12dp"/>
+                <TextView android:id="@+id/checkGanancias" android:layout_width="22dp" android:layout_height="22dp" android:gravity="center" android:text="✓" android:textSize="14sp" android:textColor="@color/white" android:background="@drawable/bg_avatar" android:visibility="invisible"/>
+            </LinearLayout>
+
+            <!-- Opción 3: Mi negocio -->
+            <LinearLayout
+                android:id="@+id/opcionNegocio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_card"
+                android:padding="15dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏪" android:textSize="20sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Mi negocio" android:textSize="13sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:layout_marginStart="12dp"/>
+                <TextView android:id="@+id/checkNegocio" android:layout_width="22dp" android:layout_height="22dp" android:gravity="center" android:text="✓" android:textSize="14sp" android:textColor="@color/white" android:background="@drawable/bg_avatar" android:visibility="invisible"/>
+            </LinearLayout>
+
+            <!-- Opción 4: Mi emprendimiento -->
+            <LinearLayout
+                android:id="@+id/opcionEmprendimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_card"
+                android:padding="15dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🚀" android:textSize="20sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Mi emprendimiento" android:textSize="13sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:layout_marginStart="12dp"/>
+                <TextView android:id="@+id/checkEmprendimiento" android:layout_width="22dp" android:layout_height="22dp" android:gravity="center" android:text="✓" android:textSize="14sp" android:textColor="@color/white" android:background="@drawable/bg_avatar" android:visibility="invisible"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor del ingreso (COP)"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etValorIngreso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ej: 2500000"
+                android:inputType="number"
+                android:background="@drawable/bg_card"
+                android:padding="15dp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textColorHint="?android:attr/textColorSecondary"
+                android:layout_marginBottom="25dp"/>
+
+            <Button
+                android:id="@+id/btnGuardarIngreso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💰 Guardar Ingreso"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple_accent"
+                android:padding="15dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

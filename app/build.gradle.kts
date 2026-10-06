@@ -42,4 +42,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     // Glide para cargar imágenes
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }

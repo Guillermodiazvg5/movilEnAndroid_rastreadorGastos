@@ -72,15 +72,20 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // ✅ Botón "Web" → abre WebActivity
+        // Botón "Web" → abre WebActivity
         findViewById<LinearLayout>(R.id.menuWeb).setOnClickListener {
             val intent = Intent(this, WebActivity::class.java)
             startActivity(intent)
         }
 
-        // ✅ Botón "Gastos" (antes "Botones") → abre AccionesActivity
+        // Botón "Gastos" (antes "Botones") → abre AccionesActivity
         findViewById<LinearLayout>(R.id.menuBotones).setOnClickListener {
             startActivity(Intent(this, AccionesActivity::class.java))
+        }
+
+        findViewById<LinearLayout>(R.id.menuIngresos).setOnClickListener {
+            val intent = Intent(this, MiPresupuestoActivity::class.java)
+            startActivity(intent)
         }
 
         // === Cargar datos del perfil ===
