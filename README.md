@@ -19,6 +19,9 @@ Aplicación móvil para Android para el registro y control de gastos personales,
 - 👤 Personalizar el perfil del usuario (nombre, rol, foto, estudios y experiencia).
 - 🌓 Cambiar entre modo claro y oscuro.
 - 💾 Persistencia local de datos en formato JSON.
+- 🌐 Navegador Web integrado.
+- 🎥 Pantalla de Video con lista de videos educativos.
+- 💵 Pantalla de Ingresos con presupuesto y gráfico de torta.
 
 ---
 
