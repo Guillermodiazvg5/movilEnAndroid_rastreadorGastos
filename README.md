@@ -85,8 +85,8 @@ Desarrollar una aplicación que permita a los usuarios llevar un control organiz
 ### 👤 Perfil del Usuario
 - Visualización de perfil con foto, nombre, rol, estudios y experiencia.
 - Edición completa del perfil (guardado persistente).
-- Cambio de foto desde **galería** o **cámara**.
-- Animación de entrada al abrir la pantalla.
+- Cambio de foto desde galería o cámara.
+- Modo oscuro/claro con switch en la barra lateral.
 
 ### 💰 Gastos
 - Listado de gastos con fecha y hora.
@@ -94,12 +94,44 @@ Desarrollar una aplicación que permita a los usuarios llevar un control organiz
 - Eliminar gastos con diálogo de confirmación.
 - Total mensual calculado automáticamente.
 - Mensaje amigable cuando la lista está vacía.
+- Persistencia local de los gastos en formato JSON.
+
+### 💵 Ingresos
+- Pantalla "Mi Presupuesto" con resumen de ingresos.
+- Registro de ingresos por categoría: Salario mensual, Ganancias ocasionales, Mi negocio, Mi emprendimiento.
+- Gráfico de torta con la distribución de ingresos por categoría.
+- Presupuesto total calculado automáticamente.
+- Lista de ingresos registrados con opción de eliminar.
+- Mensaje amigable cuando no hay ingresos registrados.
+- Persistencia local de los ingresos en formato JSON.
+
+### 🎥 Video
+- Pantalla con lista de videos educativos sobre finanzas personales.
+- Miniaturas de los videos cargadas desde YouTube.
+- Reproducción de videos integrada dentro de la app (sin salir de la pantalla).
+- Botón "Cerrar" para volver a la lista.
+- Sección de "Video Institucional" (próximamente).
+
+### 🌐 Navegador Web
+- Navegador web integrado con WebView.
+- Campo de URL personalizado con botón "Cargar".
+- Página inicial predeterminada (google.com).
 
 ### 🎨 Interfaz
-- Barra lateral de navegación con secciones: Perfil, Fotos, Video, Web, Gastos.
+- Barra lateral de navegación con secciones: Perfil, Video, Web, Gastos, Ingresos.
 - Switch de modo oscuro/claro en la barra lateral.
 - Diseño responsivo con Material Design.
 - 4 colores de botones principales en la pantalla de Acciones.
+- Gráficos con MPAndroidChart (torta y próximamente barras).
+- Carga de imágenes con Glide (miniaturas de videos).
+- Estado vacío consistente en las pantallas de Gastos e Ingresos.
+
+### 💾 Persistencia de datos
+- Almacenamiento local en formato JSON:
+  - `gastos.json` → lista de gastos.
+  - `ingresos.json` → lista de ingresos.
+  - `perfil.json` → datos del perfil del usuario.
+- Los datos se conservan al cerrar y volver a abrir la app.
 
 ---
 
