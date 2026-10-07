@@ -55,7 +55,11 @@ Aplicación móvil para Android para el registro y control de gastos personales,
  |<img width="250" height="555" alt="ListaVacia" src="https://github.com/user-attachments/assets/8eaa2184-192d-40a2-9c7f-a9455e17a49b" />
 |<img width="250" height="555" alt="ModoOscuro" src="https://github.com/user-attachments/assets/5a3e2232-7ee5-452a-9eff-11a3bf258fd0" /> |
 
+| Video | Ingresos | Agregar Ingresos |
 
+|<img width="250" height="555" alt="Captura de pantalla 2026-10-07 093203" src="https://github.com/user-attachments/assets/907fd9cc-2303-48c9-9d9a-5654b4553658" />
+|<img width="250" height="555" alt="Captura de pantalla 2026-10-07 093300" src="https://github.com/user-attachments/assets/898f4bc2-b44a-4394-b216-0c0bab8bca32" />
+|<<img width="250" height="555" alt="Captura de pantalla 2026-10-07 093345" src="https://github.com/user-attachments/assets/0fe7a8ca-a6a5-48bc-9086-c3d993b6046d" />|
 
 ---
 
