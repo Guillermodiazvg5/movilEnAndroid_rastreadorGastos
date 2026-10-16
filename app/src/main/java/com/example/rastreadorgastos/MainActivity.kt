@@ -66,6 +66,10 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Ya estás en Perfil", Toast.LENGTH_SHORT).show()
         }
 
+        findViewById<LinearLayout>(R.id.menuFotos).setOnClickListener {
+            val intent = Intent(this, FotosActivity::class.java)
+            startActivity(intent)
+        }
 
         findViewById<LinearLayout>(R.id.menuVideo).setOnClickListener {
             val intent = Intent(this, VideoActivity::class.java)

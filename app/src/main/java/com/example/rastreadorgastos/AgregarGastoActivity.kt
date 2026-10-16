@@ -53,6 +53,11 @@ class AgregarGastoActivity : AppCompatActivity() {
             finish()
         }
 
+        findViewById<LinearLayout>(R.id.menuFotos).setOnClickListener {
+            val intent = Intent(this, FotosActivity::class.java)
+            startActivity(intent)
+        }
+
 
 
         findViewById<LinearLayout>(R.id.menuVideo).setOnClickListener {

@@ -71,6 +71,11 @@ class VideoActivity : AppCompatActivity() {
             finish()
         }
 
+        findViewById<LinearLayout>(R.id.menuFotos).setOnClickListener {
+            val intent = Intent(this, FotosActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         findViewById<LinearLayout>(R.id.menuVideo).setOnClickListener {
             Toast.makeText(this, "Ya estás en Video", Toast.LENGTH_SHORT).show()
