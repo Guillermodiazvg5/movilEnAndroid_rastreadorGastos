@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context=".FotosActivity">
+
+    <!-- ================= BARRA LATERAL ================= -->
+    <LinearLayout
+        android:id="@+id/sidebar"
+        android:layout_width="90dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="?android:attr/colorBackground"
+        android:paddingTop="30dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🐷 ElPesito"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_light"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- Perfil -->
+        <LinearLayout
+            android:id="@+id/menuPerfil"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👤" android:textSize="14sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Perfil" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <!-- Fotos (ACTIVO) -->
+        <LinearLayout
+            android:id="@+id/menuFotos"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_sidebar_active"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📷" android:textSize="14sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fotos" android:textSize="10sp" android:textColor="@color/white" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <!-- Video -->
+        <LinearLayout
+            android:id="@+id/menuVideo"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎥" android:textSize="14sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Video" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <!-- Web -->
+        <LinearLayout
+            android:id="@+id/menuWeb"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌐" android:textSize="14sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Web" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <!-- Gastos -->
+        <LinearLayout
+            android:id="@+id/menuBotones"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💰" android:textSize="14sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gastos" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <!-- Ingresos -->
+        <LinearLayout
+            android:id="@+id/menuIngresos"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💵" android:textSize="14sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ingresos" android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contenidoPrincipal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sidebar"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvTituloFotos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📷 Galería de Fotos"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvSubFotos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Selecciona fotos para borrarlas, editarlas o etiquetarlas. Toca (+) para cargar una nueva foto."
+            android:textSize="13sp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTituloFotos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- RecyclerView con Scroll -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerFotos"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvSubFotos"
+            app:layout_constraintBottom_toTopOf="@id/layoutBottomBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvSinFotos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No hay fotos en la galería. Toca (+) para cargar."
+            android:textColor="?android:attr/textColorSecondary"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/recyclerFotos"
+            app:layout_constraintBottom_toBottomOf="@id/recyclerFotos"
+            app:layout_constraintStart_toStartOf="@id/recyclerFotos"
+            app:layout_constraintEnd_toEndOf="@id/recyclerFotos"/>
+
+        <!-- Botón flotante para agregar foto -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAgregarFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Cargar foto"
+            android:src="@android:drawable/ic_input_add"
+            app:tint="@color/white"
+            app:backgroundTint="@color/purple_primary"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/layoutBottomBar"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Botón flotante para editar título (aparece al seleccionar EXACTAMENTE UNA foto) -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabEditarTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Editar título"
+            android:src="@android:drawable/ic_menu_edit"
+            app:tint="@color/white"
+            app:backgroundTint="@color/purple_primary"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/fabAgregarEtiqueta"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Botón flotante para agregar etiqueta (aparece al seleccionar fotos) -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAgregarEtiqueta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Agregar etiqueta"
+            android:src="@android:drawable/ic_menu_agenda"
+            app:tint="@color/white"
+            app:backgroundTint="@color/purple_primary"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/layoutBottomBar"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Barra inferior al seleccionar fotos -->
+        <LinearLayout
+            android:id="@+id/layoutBottomBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_card"
+            android:padding="14dp"
+            android:elevation="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnBorrarSeleccionadas"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_delete"
+                android:contentDescription="Borrar seleccionadas"
+                app:tint="@android:color/holo_red_dark"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:id="@+id/tvSeleccionadasCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0 seleccionadas"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
