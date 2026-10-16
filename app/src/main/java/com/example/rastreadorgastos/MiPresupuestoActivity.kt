@@ -69,6 +69,12 @@ class MiPresupuestoActivity : AppCompatActivity() {
             finish()
         }
 
+        findViewById<LinearLayout>(R.id.menuFotos).setOnClickListener {
+            val intent = Intent(this, FotosActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         findViewById<LinearLayout>(R.id.menuVideo).setOnClickListener {
             startActivity(Intent(this, VideoActivity::class.java))
             finish()

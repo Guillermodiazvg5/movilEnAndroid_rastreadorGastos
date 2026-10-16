@@ -119,6 +119,12 @@ class WebActivity : AppCompatActivity() {
             finish()
         }
 
+        findViewById<LinearLayout>(R.id.menuFotos).setOnClickListener {
+            val intent = Intent(this, FotosActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         findViewById<LinearLayout>(R.id.menuGastos).setOnClickListener {
             val intent = Intent(this, GastosActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP

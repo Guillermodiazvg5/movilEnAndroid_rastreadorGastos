@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutItemFoto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_card"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <CheckBox
+        android:id="@+id/checkboxFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/imgFotoThumbnail"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_avatar"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="Miniatura de foto"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fotoTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary"/>
+
+        <TextView
+            android:id="@+id/fotoDescripcionPreview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="2dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
